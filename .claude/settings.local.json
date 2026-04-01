@@ -4,7 +4,19 @@
       "Bash(git checkout:*)",
       "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --yes)",
       "Bash(npm install:*)",
-      "Bash(npx shadcn@latest init --yes -d)"
+      "Bash(npx shadcn@latest init --yes -d)",
+      "Bash(npx shadcn@latest add badge card skeleton tabs separator progress)",
+      "Bash(curl -s \"https://gamma-api.polymarket.com/events?closed=false&limit=2\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(node -e \"const d=require\\('fs'\\).readFileSync\\('/dev/stdin','utf8'\\); const j=JSON.parse\\(d\\); console.log\\(JSON.stringify\\(j[0], null, 2\\)\\)\")",
+      "Bash(curl -s \"https://gamma-api.polymarket.com/events?closed=false&limit=1\" -o /tmp/pm_event.json)",
+      "Bash(node -e \"const j=require\\('/tmp/pm_event.json'\\); console.log\\(JSON.stringify\\(j[0], null, 2\\)\\)\")",
+      "Bash(curl -s \"https://gamma-api.polymarket.com/events?closed=false&limit=1\" -o \"C:/Users/user/pm_event.json\")",
+      "Bash(node -e \"const j=require\\('C:/Users/user/pm_event.json'\\); const e=j[0]; console.log\\('Keys:', Object.keys\\(e\\)\\); console.log\\('Markets[0] keys:', e.markets && Object.keys\\(e.markets[0]\\)\\); console.log\\('Tags:', e.tags\\)\")",
+      "Bash(node -e \"const j=require\\('C:/Users/user/pm_event.json'\\); const m=j[0].markets[0]; console.log\\('outcomes:', m.outcomes\\); console.log\\('outcomePrices:', m.outcomePrices\\); console.log\\('clobTokenIds:', m.clobTokenIds\\); console.log\\('lastTradePrice:', m.lastTradePrice\\)\")",
+      "Bash(npm run:*)",
+      "Bash(node -e \"const j=require\\('C:/Users/user/pm_event.json'\\); j.forEach\\(e => { e.markets?.forEach\\(m => { if \\(typeof m.clobTokenIds !== 'undefined' && !Array.isArray\\(m.clobTokenIds\\)\\) { console.log\\('Not array:', m.id, typeof m.clobTokenIds, m.clobTokenIds\\); } }\\); }\\)\")",
+      "Bash(git add:*)"
     ]
   }
 }
